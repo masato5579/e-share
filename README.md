@@ -45,12 +45,12 @@ $ cp .env.example .env
 ### DB関係
 8. migrateする前のおまじない
 ```
-run artisan key:generate
+$ run artisan key:generate
 ```
 
 9. migrate
 ```
-run artisan migrate
+$ run artisan migrate
 ```
 
 ### JS関係
@@ -64,11 +64,11 @@ $ nvm install && nvm use
 ```
 12. nodeパッケージのインストール
 ```
-$npm ci
+$ npm ci
 ```
 13. laravel Mixを起動
 ```
-npm run watch
+$ npm run watch
 ```
 
-
+上記で失敗したら教えてください。
