@@ -29,22 +29,25 @@ $ cd e-share
 ```
 
 ### PHP関係
-5. dockerコンテナの起動/build
-```
-$ run up -d --build
-```
-6. PHPパッケージのインストール
-```
-$ run composer install
-```
-7. .envファイルを作成
+5. .envファイルを作成
 ```
 $ cp .env.example .env
 ```
-8. .envファイルのDBパスワードを設定する（好きなパスワードでOK。今回はpasswordとする）
+6. .envファイルのDBパスワードを設定する（好きなパスワードでOK。今回はpasswordとする）
 ```
 DB_PASSWORD=password
 ```
+7. dockerコンテナの起動/build
+```
+$ run up -d --build
+```
+8. PHPパッケージのインストール
+```
+$ run composer install
+```
+
+* .envを先に作らないと、.envの情報が加味されないままDBが立ち上がってしまうので注意。
+* dockerコンテナを先に立ち上げてしまったら、db配下を一旦消して、buildしなおします。
 
 ### DB関係
 9. migrateする前のおまじない
@@ -74,6 +77,8 @@ $ npm install
 ```
 $ npm run watch
 ```
+
+localhost:8080で立ち上がったら成功！
 
 上記で失敗したら教えてください。
 
