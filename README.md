@@ -29,9 +29,9 @@ $ cd e-share
 ```
 
 ### PHP関係
-5. dockerコンテナの起動
+5. dockerコンテナの起動/build
 ```
-$ run up
+$ run up -d --build
 ```
 6. PHPパッケージのインストール
 ```
