@@ -41,32 +41,36 @@ $ run composer install
 ```
 $ cp .env.example .env
 ```
+8. .envファイルのDBパスワードを設定する（好きなパスワードでOK。今回はpasswordとする）
+```
+DB_PASSWORD=password
+```
 
 ### DB関係
-8. migrateする前のおまじない
+9. migrateする前のおまじない
 ```
 $ run artisan key:generate
 ```
 
-9. migrate
+10. migrate
 ```
 $ run artisan migrate
 ```
 
 ### JS関係
-10. /etc/hosts　ファイルに追記
+11. /etc/hosts　ファイルに追記
 ```
 127.0.0.1 host.docker.internal
 ```
-11. nodeバージョンの統一
+12. nodeバージョンの統一
 ```
 $ nvm install && nvm use
 ```
-12. nodeパッケージのインストール
+13. nodeパッケージのインストール
 ```
 $ npm install
 ```
-13. laravel Mixを起動
+14. laravel Mixを起動
 ```
 $ npm run watch
 ```
