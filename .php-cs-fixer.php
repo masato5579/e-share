@@ -37,6 +37,10 @@ return (new PhpCsFixer\Config())
         'phpdoc_align'                => [
           'tags' => ['param', 'property', 'throws', 'type', 'var'],
         ],
+        'phpdoc_types_order' => [
+          'null_adjustment' => 'always_last',
+          'sort_algorithm'  => 'none',
+        ],
         'yoda_style' => [
           'equal'     => false,
           'identical' => false,
