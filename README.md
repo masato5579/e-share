@@ -64,7 +64,7 @@ $ nvm install && nvm use
 ```
 12. nodeパッケージのインストール
 ```
-$ npm ci
+$ npm install
 ```
 13. laravel Mixを起動
 ```
