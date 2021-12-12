@@ -76,3 +76,31 @@ $ npm run watch
 ```
 
 上記で失敗したら教えてください。
+
+## npm script
+
+### npm run dev
+フロントエンドの開発環境の立ち上げ
+1. prettierでコードの整形
+2. eslintでコードチェック
+3. 対象ファイルのコンパイル
+
+### npm run watch
+対象ファイルのコンパイル/変更があったら即時コンパイル
+
+### npm run lint
+対象ファイルのコードチェック・コード整形
+
+### npm run fmt
+フォーマットされているかの確認
+
+### npm run fmt:fix
+フォーマット後の内容でファイルを上書きする
+
+## composer 
+
+### run composer lint
+phpのコードチェック/コード整形
+1. @phpcbf
+2. @phpc
+3. @phpcsfixe
