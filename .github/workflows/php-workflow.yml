@@ -45,7 +45,7 @@ jobs:
       - name: run development build
         run: |
           npm install
-          npm run build
+          npm run development
       - name: Execute tests (Unit and Feature tests) via PHPUnit
         env:
           DB_CONNECTION: sqlite
