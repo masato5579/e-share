@@ -1,5 +1,4 @@
-<div>
-    <!-- Validation Errors -->
+        <!-- Validation Errors -->
     <x-auth-validation-errors class="" :errors="$errors" />
 
         <form method="POST" action="{{ route('register') }}">
@@ -31,7 +30,7 @@
                 <x-label for="password_confirmation" :value="__('Confirm Password')" />
                 <x-input id="password_confirmation" class=""
                                 type="password"
-                                name="" required />
+                                name="password_confirmation" required />
             </div>
 
             <!-- Already Registered-->
@@ -45,4 +44,3 @@
             </div>
 
         </form>
-</div>
