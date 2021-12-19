@@ -1,4 +1,5 @@
-        <!-- Validation Errors -->
+<div>
+    <!-- Validation Errors -->
     <x-auth-validation-errors class="" :errors="$errors" />
 
         <form method="POST" action="{{ route('register') }}">
@@ -44,3 +45,4 @@
             </div>
 
         </form>
+</div>
