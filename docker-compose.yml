@@ -31,6 +31,10 @@ services:
       MYSQL_PASSWORD: '${DB_PASSWORD:-password}'
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-p${DB_PASSWORD:-password}"]
+      test: ["CMD", "mysqladmin", "ping", "-p$a{DB_PASSWORD:-password}"]
       retries: 3
       timeout: 5s
+  mail:
+    image: mailhog/mailhog
+    ports:
+      - '${MAIL_HOG_PORT:-8025}:8025'
