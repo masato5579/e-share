@@ -16,5 +16,6 @@ yarn-error.log
 composer.lock
 db
 package-lock.json
+.php-cs-fixer.cache
 
 
