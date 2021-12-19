@@ -17,5 +17,6 @@ composer.lock
 db
 package-lock.json
 .php-cs-fixer.cache
+.env.testing
 
 
