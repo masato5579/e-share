@@ -29,9 +29,10 @@ $ cd e-share
 ```
 
 ### PHP関係
-5. .envファイルを作成
+5. .envファイルと.env.testingを作成
 ```
 $ cp .env.example .env
+$ cp .env.example .env.testing
 ```
 6. .envファイルのDBパスワードを設定する（好きなパスワードでOK。今回はpasswordとする）
 ```
@@ -81,6 +82,52 @@ $ npm run watch
 localhost:8080で立ち上がったら成功！
 
 上記で失敗したら教えてください。
+
+### testDB関係(これをしないとテストした時に本番DBが変わってしまう)
+
+15. .env.testingを作成する
+
+```
+$ cp .env.example .env.testing
+```
+
+16. .env.testingを以下のように編集する
+
+```
+APP_KEY=(ここはenvファイルのをコピペしてください。)
+DB_DATABASE=eshare_testing
+DB_USERNAME=sail
+DB_PASSWORD=password
+```
+
+17. dockerの中で、mysqlを立ち上げる
+
+```
+$ docker compose exec mysql bash
+```
+
+18. mysqlにログインする
+```
+$ mysql -p
+```
+
+19. テスト用のDBを作成する
+
+```
+mysql> CREATE DATABASE eshare_testing
+```
+
+20. deployerに権限に付与する
+
+```
+mysql> GRANT ALL ON .* TO sail;
+```
+
+21. テスト用DBをmigrateする
+
+```
+$ run artisan migrate --env=testing
+```
 
 ## npm script
 
