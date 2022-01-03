@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom'
 
 function App() {
     return (
-        <div className="container">
+        <>
             <p>こんにちは</p>
-        </div>
+        </>
     )
 }
 
