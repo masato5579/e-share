@@ -1,6 +1,7 @@
 /node_modules
 /public/hot
 /public/storage
+/public/css
 /storage/*.key
 /vendor
 .env
@@ -18,5 +19,3 @@ db
 package-lock.json
 .php-cs-fixer.cache
 .env.testing
-
-
