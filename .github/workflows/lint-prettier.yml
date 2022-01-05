@@ -22,3 +22,5 @@ jobs:
         run: npm run fmt
       - name: Lint
         run: npm run lint
+      - name: Lint Blade
+        run: npm run lint:blade
