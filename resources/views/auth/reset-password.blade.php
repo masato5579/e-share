@@ -1,6 +1,6 @@
     <div>
         <!-- Validation Errors -->
-        <x-auth-validation-errors class="" :errors="$errors" />
+        <x-auth-validation-errors :errors="$errors" />
 
             <form method="POST" action="{{ route('password.update') }}">
                 @csrf
@@ -11,24 +11,22 @@
                 <!-- Email Address -->
                 <div>
                     <x-label for="email" :value="__('Email')" />
-                    <x-input id="email" class="" type="email" name="email" :value="old('email', $request->email)" required autofocus />
+                    <x-input id="email" type="email" name="email" :value="old('email', $request->email)" required autofocus />
                 </div>
 
                 <!-- Password -->
                 <div class="mt-4">
                     <x-label for="password" :value="__('Password')" />
-                    <x-input id="password" class="" type="password" name="password" required />
+                    <x-input id="password" type="password" name="password" required />
                 </div>
 
                 <!-- Confirm Password -->
                 <div class="mt-4">
                     <x-label for="password_confirmation" :value="__('Confirm Password')" />
-                    <x-input id="password_confirmation" class=""
-                                        type="password"
-                                        name="password_confirmation" required />
+                    <x-input id="password_confirmation" type="password" name="password_confirmation" required />
                 </div>
 
-                <div class="">
+                <div>
                     <x-button>
                         {{ __('Reset Password') }}
                     </x-button>

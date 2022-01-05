@@ -23,8 +23,8 @@
     <body>
         <div id='app'>
         </div>
-        <div class="">
-            <div class="">
+        <div>
+            <div>
                 You're logged in!
             </div>
             <!-- logout -->
