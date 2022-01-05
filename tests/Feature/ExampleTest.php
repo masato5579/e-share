@@ -14,7 +14,7 @@ class ExampleTest extends TestCase
     public function testExample()
     {
         $responseLogin     = $this->get('/login');
-        $responseDashboard = $this->get('/dashboard');
+        $responseDashboard = $this->get('/home');
 
         $responseLogin->assertStatus(200);
         $responseDashboard->assertStatus(302);
