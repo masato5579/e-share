@@ -34,3 +34,7 @@ services:
       test: ["CMD", "mysqladmin", "ping", "-p${DB_PASSWORD:-password}"]
       retries: 3
       timeout: 5s
+  mail:
+    image: mailhog/mailhog
+    ports:
+      - '${MAIL_HOG_PORT:-8025}:8025'
